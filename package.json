@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://rsbroetto.github.io/wardmour-sheet-creator",
+  "homepage": "https://rsbroetto.github.io/wardmour-sheet-creator/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
