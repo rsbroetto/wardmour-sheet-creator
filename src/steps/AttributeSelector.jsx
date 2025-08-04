@@ -51,7 +51,7 @@ export default function AttributeSelector({ hero, setHero }) {
   };
 
   return (
-    <div className="bg-white p-4 flex flex-col items-center w-full">
+    <div className="bg-white md:p-4 p-0 pb-4 flex flex-col items-center w-full">
       <div className="text-2xl font-bold bg-gray-300 px-6 py-2 mb-6 w-full">
         Preencha seus atributos (máximo de {hero.maxPoints} pontos)
       </div>

@@ -169,14 +169,14 @@ export default function SkillSelection({hero, setHero}) {
   };
 
   return (
-    <div className="min-h-screen bg-white p-4 flex flex-col items-start mx-auto">
+    <div className="min-h-screen bg-white md:p-4 p-0 flex flex-col items-start mx-auto">
       <div className="text-2xl font-bold bg-gray-300 px-6 py-2 mb-6 w-full text-left">
         Escolha suas Perícias (máximo {hero.maxSkills} perícias)
       </div>
 
       <div className="flex flex-col gap-6 pl-2">
         {skills.map((skill) => (
-          <label key={skill.nome} className="flex items-start gap-2">
+          <label key={skill.nome} className="flex items-start gap-2 text-left">
             <input
               type="checkbox"
               checked={selecionadas.includes(skill.nome)}

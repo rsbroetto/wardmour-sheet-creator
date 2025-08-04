@@ -12,14 +12,14 @@ export default function ArchetypeSelection({hero, setHero}) {
   const { bonuses, description, image } = archetypesData[selected];
 
   return (
-    <div className="flex flex-col w-full bg-white p-4">
-      <div className="text-2xl font-bold bg-gray-200 px-4 py-2 mb-4">
+    <div className="flex flex-col w-full bg-white md:p-4 p-0">
+      <div className="text-2xl font-bold bg-gray-200 px-4 py-2 md:mb-4 mb-0">
         Selecione seu arquetipo
       </div>
 
-      <div className="flex flex-1 border-t border-gray-300">
+      <div className="flex flex-1 flex-col md:flex-row border-t border-gray-300">
         {/* Coluna Esquerda */}
-        <div className="w-1/4 flex flex-col gap-4 pr-4 pt-4">
+        <div className="md:w-1/4 w-100 flex flex-row md:flex-col md:gap-4 md:pr-4 md:pt-4 overflow-auto flex-nowrap whitespace-nowrap md:justify-start justify-center">
           {Object.keys(archetypesData).filter(s => s != 'Undef').map((archetype) => (
             <label
               key={archetype}
@@ -56,15 +56,15 @@ export default function ArchetypeSelection({hero, setHero}) {
         </div>
 
         {/* Coluna Direita */}
-        <div className="w-3/4 pl-4 pt-4 flex flex-col gap-4">
+        <div className="md:w-3/4 w-100 md:pl-4 md:pt-4 pl-0 pt-0 flex flex-col md:gap-4 gap-0">
 
           {
             selected === 'Undef' ?
                 <p className='text-2xl h-[100px] flex items-center justify-center' ><span>selecione seu arquetipo</span></p>
             :
                 <>
-                    <div className="flex justify-center p-[30px]">
-                        <img src={image} alt={selected} className="w-[80%] object-contain" />
+                    <div className="flex justify-center md:p-[30px] p-0 pt-1">
+                        <img src={image} alt={selected} className="md:w-[80%] w-[100%] object-contain" />
                     </div>
 
                     <div className="bg-gray-200 p-4 rounded">
@@ -77,7 +77,7 @@ export default function ArchetypeSelection({hero, setHero}) {
                         </ul>
                     </div>
 
-                    <p className="text-justify text-sm px-2 leading-loose">{description}</p>
+                    <p className="text-justify text-sm md:px-2 p-4 leading-loose">{description}</p>
                 </>
           }    
         </div>

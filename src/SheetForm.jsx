@@ -92,25 +92,24 @@ function SheetForm() {
     };
  
     return (
-        <div className='flex'>
+        <div className='flex md:p-[4rem] p-0 h-screen'>
 
-            <div className="mx-auto p-6 bg-white rounded shadow flex flex-col gap-0 w-full">
-                {/* <h2 className="text-xl font-bold">Passo {passoAtual + 1}</h2> */}
+            <div className="mx-auto md:p-6 p-0 bg-white rounded shadow flex flex-col gap-0 w-full">
 
-                <div className="p-4">{passos[passoAtual]}</div>
+                <div className="md:p-4 p-0">{passos[passoAtual]}</div>
 
                 <div className="flex justify-end">
                     {
                         passoAtual == 6 ?
                             <button
                             onClick={() => window.print()}
-                                className="bg-blue-500 text-white px-4 py-2 disabled:opacity-50 justify-end"
+                                className="bg-blue-500 text-white md:px-4 md:py-2 px-6 py-4 disabled:opacity-50 justify-end md:w-[15%] w-[100%]"
                             >imprimir</button>
                         :
                             <button
                             onClick={avancar}
                             disabled={isDisabled()}
-                            className="bg-blue-500 text-white px-4 py-2 disabled:opacity-50 justify-end"
+                            className="bg-blue-500 text-white md:px-4 md:py-2 px-6 py-4 disabled:opacity-50 justify-end md:w-[15%] w-[100%]"
                             >
                             Avançar
                             </button>
