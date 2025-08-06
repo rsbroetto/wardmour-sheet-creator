@@ -92,9 +92,9 @@ function SheetForm() {
     };
  
     return (
-        <div className='flex md:p-[4rem] p-0 h-screen'>
+        <div className='flex md:p-[4rem] p-0'>
 
-            <div className="mx-auto md:p-6 p-0 bg-white rounded shadow flex flex-col gap-0 w-full">
+            <div className={"mx-auto md:p-6 p-0 " + (passoAtual == 6 ? "bg-brand-light border border-brand-dark" : "bg-white") + " rounded shadow flex flex-col gap-0 w-full"}>
 
                 <div className="md:p-4 p-0">{passos[passoAtual]}</div>
 

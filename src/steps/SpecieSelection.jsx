@@ -14,11 +14,11 @@ export default function SpecieSelection({hero, setHero}) {
 
       <div className="flex flex-col md:flex-row flex-1 border-t border-gray-300">
         {/* Coluna Esquerda */}
-        <div className="md:w-1/4 w-100 flex flex-row md:flex-col md:gap-4 md:pr-4 md:pt-4 overflow-auto flex-nowrap md:justify-start justify-center">
+        <div className="md:w-1/4 w-100 flex flex-row md:flex-col md:gap-4 md:pr-4 md:pt-4 overflow-auto flex-nowrap md:justify-start justify-left">
           {Object.keys(speciesData).filter(s => s != 'Undef').map((specie) => (
             <label
               key={specie}
-              className={`px-4 py-2 text-center border cursor-pointer ${
+              className={`md:px-4 md:py-2 py-6 px-6 text-center border cursor-pointer ${
                 selected === specie ? 'bg-gray-400 text-white font-semibold' : 'bg-gray-200'
               }`}
             >
